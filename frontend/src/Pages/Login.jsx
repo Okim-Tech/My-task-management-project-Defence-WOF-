@@ -1,18 +1,60 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../Services/authService";
 import AuthLayout from "../layouts/AuthLayout";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
+import { Mail, Lock } from "lucide-react";
 
 function Login() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const data = await loginUser(formData);
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      alert("Login Successful!");
+
+      navigate("/dashboard");
+    } catch (error) {
+      alert(error.response?.data?.message || "Login Failed");
+    }
+  };
+
   return (
     <AuthLayout title="Student Task Management">
-      <form>
-        <Input type="email" placeholder="Enter your email" name="email" />
-
+      <form onSubmit={handleSubmit}>
+        <Input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          icon={<Mail size={18} />}
+          value={formData.email}
+          onChange={handleChange}
+        />
         <Input
           type="password"
-          placeholder="Enter your password"
           name="password"
+          placeholder="Enter your password"
+          icon={<Lock size={18} />}
+          value={formData.password}
+          onChange={handleChange}
         />
 
         <Button text="Login" type="submit" />

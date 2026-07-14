@@ -1,21 +1,32 @@
-function Input({ type = "text", placeholder, value, onChange, name }) {
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
+
+function Input({ type = "text", placeholder, value, onChange, icon, name }) {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const isPassword = type === "password";
+
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      name={name}
-      style={{
-        width: "100%",
-        padding: "12px",
-        marginBottom: "15px",
-        border: "1px solid #ccc",
-        borderRadius: "8px",
-        fontSize: "16px",
-        boxSizing: "border-box",
-      }}
-    />
+    <div className="input-group">
+      {icon && <span className="input-icon">{icon}</span>}
+
+      <input
+        type={isPassword && showPassword ? "text" : type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        name={name}
+      />
+
+      {isPassword && (
+        <span
+          className="password-toggle"
+          onClick={() => setShowPassword(!showPassword)}
+        >
+          {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+        </span>
+      )}
+    </div>
   );
 }
 
