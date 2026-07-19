@@ -33,6 +33,7 @@ function Login() {
 
       navigate("/dashboard");
     } catch (error) {
+      console.log(error.response);
       alert(error.response?.data?.message || "Login Failed");
     }
   };
