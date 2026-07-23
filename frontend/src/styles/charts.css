@@ -1,0 +1,39 @@
+/* ==========================
+   CHARTS
+========================== */
+
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 25px;
+  margin: 35px 0;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.chart-card h3 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+/* Dark Mode */
+
+body.dark .chart-card {
+  background: #1e293b;
+}
+
+body.dark .chart-card h3 {
+  color: #ffffff;
+}

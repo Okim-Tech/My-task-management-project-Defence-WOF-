@@ -1,0 +1,64 @@
+/* ===========================
+   SUMMARY CARD
+=========================== */
+
+.summary-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.summary-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #4f46e5;
+}
+
+.summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.summary-info h3 {
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.summary-info h1 {
+  font-size: 38px;
+  color: #1f2937;
+}
+
+.summary-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.pending {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.progress {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.completed {
+  background: linear-gradient(135deg, #10b981, #059669);
+}

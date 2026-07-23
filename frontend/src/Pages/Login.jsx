@@ -5,6 +5,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 import { Mail, Lock } from "lucide-react";
+import { toast } from "react-toastify";
 
 function Login() {
   const navigate = useNavigate();
@@ -29,12 +30,12 @@ function Login() {
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      alert("Login Successful!");
+      toast.success("Login Successful!");
 
       navigate("/dashboard");
     } catch (error) {
       console.log(error.response);
-      alert(error.response?.data?.message || "Login Failed");
+      toast.error(error.response?.data?.message || "Login Failed");
     }
   };
 

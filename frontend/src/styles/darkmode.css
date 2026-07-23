@@ -1,0 +1,114 @@
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Dashboard */
+
+body.dark .dashboard-container {
+  background: #0f172a;
+}
+
+/* Navbar */
+
+body.dark .navbar {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark .logo-circle {
+  background: #312e81;
+}
+
+body.dark .notification,
+body.dark .theme-btn {
+  background: #334155;
+  color: white;
+}
+
+body.dark .user-profile {
+  color: white;
+}
+
+body.dark .avatar {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Cards */
+
+body.dark .summary-card,
+body.dark .task-card,
+body.dark .analytics-card {
+  background: #1e293b;
+  color: white;
+  box-shadow: none;
+}
+
+/* Text */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark small {
+  color: #f8fafc;
+}
+
+/* Inputs */
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #cbd5e1;
+}
+
+/* Toolbar */
+
+body.dark .task-toolbar input,
+body.dark .task-toolbar select {
+  background: #1e293b;
+  color: white;
+}
+
+/* Modal */
+
+body.dark .modal {
+  background: #1e293b;
+  color: white;
+}
+
+/* Progress */
+
+body.dark .progress-track,
+body.dark .analytics-progress {
+  background: #334155;
+}
+
+/* Empty State */
+
+body.dark .empty-state {
+  color: white;
+}
+
+/* Buttons */
+
+body.dark .theme-btn:hover,
+body.dark .logout-btn:hover,
+body.dark .add-task-btn:hover,
+body.dark .edit-btn:hover,
+body.dark .delete-btn:hover {
+  opacity: 0.95;
+}

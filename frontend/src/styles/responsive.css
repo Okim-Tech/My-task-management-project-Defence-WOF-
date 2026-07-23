@@ -1,0 +1,132 @@
+/* ============================
+   TABLETS (1024px and below)
+============================ */
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .summary-card,
+  .analytics-grid,
+  .charts-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .task-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-tools {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* ============================
+   LARGE PHONES (768px and below)
+============================ */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-tools {
+    flex-direction: column;
+  }
+
+  .dashboard-tools input,
+  .dashboard-tools select,
+  .dashboard-tools button {
+    width: 100%;
+  }
+
+  .summary-cards,
+  .analytics-grid,
+  .charts-section,
+  .task-list {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    height: 350px;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 25px;
+  }
+}
+
+/* ============================
+   SMALL PHONES (480px and below)
+============================ */
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-title h1 {
+    font-size: 28px;
+  }
+
+  .summary-card h1 {
+    font-size: 30px;
+  }
+
+  .analytics-card h2 {
+    font-size: 28px;
+  }
+
+  .task-card {
+    padding: 18px;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .task-actions button {
+    width: 100%;
+  }
+
+  .add-task-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auth-card {
+    width: 92%;
+    padding: 28px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 30px;
+  }
+
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+}

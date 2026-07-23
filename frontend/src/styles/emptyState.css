@@ -1,0 +1,49 @@
+.empty-state {
+  background: #fff;
+  border-radius: 25px;
+  padding: 70px 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.empty-state h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.empty-state p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.empty-btn {
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.empty-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}

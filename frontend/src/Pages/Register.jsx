@@ -6,6 +6,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 import { registerUser } from "../services/authService";
+import { toast } from "react-toastify";
 
 function Register() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ function Register() {
     e.preventDefault();
 
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match");
+      toast.success("Passwords do not match");
       return;
     }
 
@@ -39,11 +40,11 @@ function Register() {
         password: formData.password,
       });
 
-      alert("Registration Successful!");
+      toast.success("Registration Successful!");
 
       navigate("/");
     } catch (error) {
-      alert(error.response?.data?.message || "Registration Failed");
+      toast.error(error.response?.data?.message || "Registration Failed");
     }
   };
 
