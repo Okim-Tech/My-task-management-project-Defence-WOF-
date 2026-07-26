@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/tasks";
+const API_URL =
+  "https://my-task-management-project-defence-wof.onrender.com/api/auth";
 
 // Authorization Header
 const getConfig = (token) => ({
