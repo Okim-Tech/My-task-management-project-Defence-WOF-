@@ -18,7 +18,7 @@ import "./styles/charts.css";
 import "./styles/darkmode.css";
 
 import App from "./App.jsx";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "./Context/ThemeContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
