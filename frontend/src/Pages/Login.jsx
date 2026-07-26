@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../Services/authService";
-import AuthLayout from "../layouts/AuthLayout";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
+import AuthLayout from "../Layouts/AuthLayout";
+import Input from "../Components/ui/Input";
+import Button from "../Components/ui/Button";
 import { Mail, Lock } from "lucide-react";
 import { toast } from "react-toastify";
 

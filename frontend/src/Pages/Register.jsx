@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { User, Mail, Lock } from "lucide-react";
 
-import AuthLayout from "../layouts/AuthLayout";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
-import { registerUser } from "../services/authService";
+import AuthLayout from "../Layouts/AuthLayout";
+import Input from "../Components/ui/Input";
+import Button from "../Components/ui/Button";
+import { registerUser } from "../Services/authService";
 import { toast } from "react-toastify";
 
 function Register() {
