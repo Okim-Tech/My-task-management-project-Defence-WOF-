@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { deleteTask } from "../../Services/taskService";
-import "../../styles/taskcard.css";
+import "../../styles/taskCard.css";
 import { toast } from "react-toastify";
 
 function TaskCard({ task, token, onDelete, onEdit }) {

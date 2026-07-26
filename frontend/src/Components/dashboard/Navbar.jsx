@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { LogOut, Bell, ClipboardList, Moon, Sun } from "lucide-react";
 
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../Context/ThemeContext";
 
 function Navbar() {
   const navigate = useNavigate();
